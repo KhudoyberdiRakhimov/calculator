@@ -62,7 +62,11 @@ class Calculator {
   }
 
   computeSqrt() {
-    this.currentOperand = Math.sqrt(this.currentOperand)
+    if (this.currentOperand >= 0) {
+      this.currentOperand = Math.sqrt(this.currentOperand)
+    } else {
+      this.currentOperand = Infinity
+    }
   }
 
   getDisplayNumber(number) {
