@@ -39,10 +39,8 @@ class Calculator {
     switch (this.operation) {
       case '+':
         computation = prev + current
-        if (computation.toString().split('.')[1].length > 5) {
+        if (computation.toString().split('.')[1] && computation.toString().split('.')[1].length > 5) {
           computation = computation.toFixed(1)
-        } else {
-          computation = computation
         }
           break
       case '-':
